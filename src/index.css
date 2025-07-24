@@ -1,0 +1,86 @@
+/* src/index.css */
+
+/* 웹폰트 임포트 (Google Fonts에서 Noto Serif KR 또는 Nanum Myeongjo 선택하여 추가) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap');
+/* 또는 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap'); */
+
+
+/* 전반적인 페이지 스타일 (고전 문학 분위기) */
+body {
+  background-color: #f8f5ed; /* 약간 누르스름한 종이 색상 */
+  color: #3e2723; /* 진한 갈색 글씨 */
+  font-family: 'Noto Serif KR', 'Nanum Myeongjo', serif; /* 명조체 계열 폰트 */
+  line-height: 1.6;
+  margin: 0; /* 기본 마진 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+/* 컨테이너 및 섹션 */
+/* .MuiContainer-root 는 Material-UI가 생성하는 클래스 이름이므로, 직접 클래스 이름을 지정하는 대신 sx prop을 사용하거나 아래와 같이 클래스 이름을 활용할 수 있습니다. */
+.MuiContainer-root {
+  max-width: 800px; /* 고전 책처럼 가독성을 위해 너비 제한 */
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fffaf0; /* 컨테이너 배경색을 약간 더 밝게 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 은은한 그림자 */
+  border-radius: 8px; /* 모서리 살짝 둥글게 */
+}
+
+/* 제목 스타일 (h1) */
+h1 {
+  font-family: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+  font-weight: 700; /* 볼드 */
+  color: #5d4037; /* 더 진한 갈색 */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d7ccc8; /* 얇은 밑줄 */
+  font-size: 2.5rem; /* 더 크게 */
+  text-align: center;
+}
+
+/* 그룹 제목 (h5에 해당) */
+/* .MuiTypography-h5 는 Material-UI가 생성하는 클래스 이름입니다. */
+.MuiTypography-h5 {
+  font-family: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+  font-weight: 600;
+  color: #6d4c41; /* 약간 밝은 갈색 */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+/* 목록 스타일 */
+ul {
+  list-style: none; /* 기본 리스트 스타일 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem; /* 들여쓰기 */
+  position: relative;
+}
+
+li::before {
+  content: "•"; /* 커스텀 글머리 기호 (점) */
+  color: #8d6e63; /* 갈색 점 */
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  line-height: 1; /* 텍스트와 높이 맞추기 */
+}
+
+/* 링크 스타일 */
+a {
+  color: #4a148c; /* 고전적인 느낌의 보라색 (진보라) */
+  text-decoration: none; /* 기본 밑줄 제거 */
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  color: #7b1fa2; /* 호버 시 색상 변경 */
+  text-decoration: underline; /* 호버 시 밑줄 표시 */
+}
